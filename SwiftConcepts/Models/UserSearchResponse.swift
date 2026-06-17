@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct UserSearchResponse : Codable {
+    let totalCount : Int
+    let items : [GitHubUser]
+    
+    enum CodingKeys : String, CodingKey {
+        case totalCount = "total_count"
+        case items
+    }
+}
